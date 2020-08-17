@@ -1,26 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ClassComponent from './components/ClassComponent';
+import FuncComponent from './components/FuncComponent';
+import MyComponent from './components/MyComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // atributos predeterminados de HTML - type, value, src, id, style
+    <div className="App" style={{ background: "cornflowerblue"}}>
+      {/* 
+
+      <ClassComponent/>
+      <FuncComponent movie="Pinocchio" /> 
+
+      */}
+
+      <MyComponent />
+
+      {/*          city="Barcelona" es un prop ( datos que pasamos al MyComponent )  */}
+      <MyComponent city="Barcelona" className="my-component"/>
     </div>
   );
 }
 
 export default App;
+
+
+// https://i.imgur.com/v896ecx.jpg
+// https://i.imgur.com/ZquC84W.jpg
